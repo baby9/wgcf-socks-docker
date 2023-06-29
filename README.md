@@ -1,11 +1,6 @@
 
 Cloudflare WARP (WireGaurd protocol) run in containerized environment.
 
-## Dependencies
-
-- [warp-reg](https://github.com/badafans/warp-reg) - Register WARP account via CloudFlare's API
-- [sing-box](https://github.com/SagerNet/sing-box) - A powerful proxy platform instead of [wgcf](https://github.com/ViRb3/wgcf)
-
 ## Features
 - No privilege required
 - Arm architecture support
@@ -42,5 +37,6 @@ Lookup your WARP IP
 - Require Linux Kernel ≥ 5.6 on host machine (Wireguard required)
 
 ## Reference
-- [warp-reg](https://github.com/badafans/warp-reg)
-- [sing-box](https://github.com/SagerNet/sing-box)
+- [warp-reg](https://github.com/badafans/warp-reg) - Register WARP account via CloudFlare's API
+- [sing-box](https://github.com/SagerNet/sing-box) - A powerful proxy platform instead of [wgcf](https://github.com/ViRb3/wgcf)
+
