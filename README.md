@@ -16,12 +16,20 @@ Cloudflare WARP (WireGaurd protocol) run in containerized environment.
 ```
 docker run -d -p 40000:40000 --restart=unless-stopped zenexas/wgcf-socks:latest
 ```
+With socks user and password:
 
+```
+docker run -d -p 40000:40000 -e SOCKS_USER="" -e SOCKS_PASSWORD="" --restart=unless-stopped zenexas/wgcf-socks:latest
+```
 Socks5 proxy server will be listening at port 40000.
 <br/><br/>
-RUN :
+#### RUN :
 ```
 curl -s4m8 -x socks5://127.0.0.1:40000 https://www.cloudflare.com/cdn-cgi/trace | grep warp
+```
+With password:
+```
+curl -s4m8 --socks5 user:password@127.0.0.1:40000 https://www.cloudflare.com/cdn-cgi/trace | grep warp
 ```
 
 Test your WARP account type
