@@ -27,13 +27,18 @@ With password:
 ```
 curl -s4m8 --socks5 user:password@127.0.0.1:40000 https://www.cloudflare.com/cdn-cgi/trace | grep warp
 ```
-
 Test your WARP account type
+<br/><br/>
 ````
 curl -s -x socks5://127.0.0.1:40000 https://ipinfo.io
 ````
-Lookup your WARP IP
-
+Lookup your WARP IP Location
+<br/><br/>
+````
+curl -x socks5://127.0.0.1:40000 https://speed.cloudflare.com/__down?bytes=1000000000 > /dev/null
+````
+Speedtest
+<br/><br/>
 ## Notice
 - Require Linux Kernel ≥ 5.6 on host machine (Wireguard required)
 
