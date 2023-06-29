@@ -19,6 +19,7 @@ docker run -d -p 40000:40000 -e SOCKS_USER="" -e SOCKS_PASSWORD="" --restart=unl
 Socks5 proxy server will be listening at port 40000.
 <br/><br/>
 #### RUN :
+No password:
 ```
 curl -s4m8 -x socks5://127.0.0.1:40000 https://www.cloudflare.com/cdn-cgi/trace | grep warp
 ```
