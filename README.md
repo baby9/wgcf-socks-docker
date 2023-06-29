@@ -5,7 +5,7 @@ Cloudflare WARP (WireGaurd protocol) run in containerized environment.
 - No privilege required
 - Arm architecture support
 - Works in HK & LA (WireGuard reserved field bytes support)
-
+<br/><br/>
 ## Usage
 
 ```
@@ -27,12 +27,12 @@ With password:
 ```
 curl -s4m8 --socks5 user:password@127.0.0.1:40000 https://www.cloudflare.com/cdn-cgi/trace | grep warp
 ```
-Test your WARP account type
+Test your warp account type
 <br/><br/>
 ````
 curl -s -x socks5://127.0.0.1:40000 https://ipinfo.io
 ````
-Lookup your WARP IP Location
+Lookup your warp ip location
 <br/><br/>
 ````
 curl -x socks5://127.0.0.1:40000 https://speed.cloudflare.com/__down?bytes=1000000000 > /dev/null
