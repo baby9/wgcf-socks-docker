@@ -10,8 +10,8 @@
             "udp_timeout": 300,
             "users": [
                 {
-                  "username": "",
-                  "password": ""
+                  "username": "admin",
+                  "password": "123456"
                 }
             ]
         }
