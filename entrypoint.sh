@@ -9,5 +9,13 @@ if [ ! -f warp.yml ]; then
     sed -i "s#$(cat sb-config.json | grep 'reserved' | awk -F '[' '{print $2}' | awk -F ']' '{print $1}')#$(cat warp.yml | grep 'reserved:' | cut -d "[" -f 2 | cut -d "]" -f 1)#" sb-config.json
 fi
 
+if [ ! -z $SOCKS_USER ] && [ ! -z $SOCKS_PASSWORD ]; then
+    sed -i "s#$(cat sb-config.json | grep 'username' | awk -F ':' '{print $2}' | awk -F '"' '{print $2}')#$SOCKS_USER#" sb-config.json
+    sed -i "s#$(cat sb-config.json | grep 'password' | awk -F ':' '{print $2}' | awk -F '"' '{print $2}')#$SOCKS_PASSWORD#" sb-config.json
+else
+    sed -i "s#$(cat sb-config.json | grep 'username' | awk -F ':' '{print $2}' | awk -F '"' '{print $2}')##" sb-config.json
+    sed -i "s#$(cat sb-config.json | grep 'password' | awk -F ':' '{print $2}' | awk -F '"' '{print $2}')##" sb-config.json
+fi
+
 socat TCP-LISTEN:40000,fork TCP:localhost:40001 &
 ./sing-box run -c sb-config.json

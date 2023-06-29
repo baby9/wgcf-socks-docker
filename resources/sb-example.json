@@ -7,7 +7,13 @@
             "type": "socks",
             "listen": "127.0.0.1",
             "listen_port": 40001,
-            "udp_timeout": 300
+            "udp_timeout": 300,
+            "users": [
+                {
+                  "username": "",
+                  "password": ""
+                }
+            ]
         }
     ],
     "outbounds": [
