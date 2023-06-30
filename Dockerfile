@@ -3,6 +3,7 @@ ARG TARGETARCH
 EXPOSE 40000
 WORKDIR /app
 
+COPY resources/wget.sh ./
 COPY resources/sb-example.json ./
 COPY wget.sh entrypoint.sh ./
 
