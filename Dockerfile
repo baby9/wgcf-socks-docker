@@ -5,7 +5,7 @@ WORKDIR /app
 
 COPY resources/wget.sh ./
 COPY resources/sb-example.json ./
-COPY wget.sh entrypoint.sh ./
+COPY entrypoint.sh ./
 
 RUN true && \
 	sh wget.sh && \
