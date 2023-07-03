@@ -85,7 +85,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	url := "https://api.cloudflareclient.com/v0a2158/reg"
+	url := "https://api.cloudflareclient.com/v0a3463/reg"
 	method := "POST"
 
 	rand.Seed(time.Now().UnixNano())
@@ -106,7 +106,7 @@ func main() {
 		fmt.Println(err)
 		return
 	}
-	req.Header.Add("CF-Client-Version", "a-6.10-2158")
+	req.Header.Add("CF-Client-Version", "a-6.28-3463")
 	req.Header.Add("User-Agent", "okhttp/3.12.1")
 	req.Header.Add("Content-Type", "application/json; charset=UTF-8")
 
