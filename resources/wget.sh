@@ -18,7 +18,7 @@ case $TARGETARCH in
     ;;
 esac
 
-wget "https://github.com/badafans/warp-reg/releases/download/v1.0/$Reg_arch" -O WarpRegister
+wget "https://github.com/baby9/wgcf-socks-docker/releases/download/v1.0/$Reg_arch" -O WarpRegister
 wget "https://github.com/SagerNet/sing-box/releases/download/v1.3.0/${Sing_arch}.tar.gz"
 tar xvf "${Sing_arch}.tar.gz"
 mv "${Sing_arch}/sing-box" .
