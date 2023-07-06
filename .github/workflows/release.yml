@@ -20,7 +20,7 @@ jobs:
         run: |
           cd build
           go mod init main
-          go get golang.org/x/crypto/curve25519
+          go mod tidy
           CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o output/main-linux-amd64 -ldflags '-s -w -extldflags "-static"'
           CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build -o output/main-linux-arm64 -ldflags '-s -w -extldflags "-static"'
           CGO_ENABLED=0 GOOS=linux GOARCH=arm go build -o output/main-linux-arm -ldflags '-s -w -extldflags "-static"'
