@@ -2,15 +2,15 @@
 
 case $TARGETARCH in
 "arm")
-    Reg_arch="main-linux-arm"
+    Reg_arch="WarpRegister-linux-arm"
     Sing_arch="sing-box-1.3.0-linux-armv7"
     ;;
 "arm64")
-    Reg_arch="main-linux-arm64"
+    Reg_arch="WarpRegister-linux-arm64"
     Sing_arch="sing-box-1.3.0-linux-arm64"
     ;;
 "amd64")
-    Reg_arch="main-linux-amd64"
+    Reg_arch="WarpRegister-linux-amd64"
     Sing_arch="sing-box-1.3.0-linux-amd64"
     ;;
 *)

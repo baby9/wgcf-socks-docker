@@ -19,16 +19,16 @@ jobs:
       - name: Build
         run: |
           cd build
-          go mod init main
+          go mod init WarpRegister
           go mod tidy
-          CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o output/main-linux-amd64 -ldflags '-s -w -extldflags "-static"'
-          CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build -o output/main-linux-arm64 -ldflags '-s -w -extldflags "-static"'
-          CGO_ENABLED=0 GOOS=linux GOARCH=arm go build -o output/main-linux-arm -ldflags '-s -w -extldflags "-static"'
-          CGO_ENABLED=0 GOOS=darwin GOARCH=arm64 go build -o output/main-darwin-arm64 -ldflags '-s -w -extldflags "-static"'
-          CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -o output/main-darwin-amd64 -ldflags '-s -w -extldflags "-static"'
-          CGO_ENABLED=0 GOOS=windows GOARCH=arm64 go build -o output/main-windows-arm64 -ldflags '-s -w -extldflags "-static"'
-          CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -o output/main-windows-amd64 -ldflags '-s -w -extldflags "-static"'
-          CGO_ENABLED=0 GOOS=android GOARCH=arm64 go build -o output/main-android-arm64 -ldflags '-s -w -extldflags "-static"'
+          CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o output/WarpRegister-linux-amd64 -ldflags '-s -w -extldflags "-static"'
+          CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build -o output/WarpRegister-linux-arm64 -ldflags '-s -w -extldflags "-static"'
+          CGO_ENABLED=0 GOOS=linux GOARCH=arm go build -o output/WarpRegister-linux-arm -ldflags '-s -w -extldflags "-static"'
+          CGO_ENABLED=0 GOOS=darwin GOARCH=arm64 go build -o output/WarpRegister-darwin-arm64 -ldflags '-s -w -extldflags "-static"'
+          CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -o output/WarpRegister-darwin-amd64 -ldflags '-s -w -extldflags "-static"'
+          CGO_ENABLED=0 GOOS=windows GOARCH=arm64 go build -o output/WarpRegister-windows-arm64 -ldflags '-s -w -extldflags "-static"'
+          CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -o output/WarpRegister-windows-amd64 -ldflags '-s -w -extldflags "-static"'
+          CGO_ENABLED=0 GOOS=android GOARCH=arm64 go build -o output/WarpRegister-android-arm64 -ldflags '-s -w -extldflags "-static"'
       
       - name: Release
         uses: softprops/action-gh-release@v1 # 将可执行文件 release 上去
