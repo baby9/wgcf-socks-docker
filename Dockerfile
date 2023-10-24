@@ -7,13 +7,11 @@ RUN true && \
     CGO_ENABLED=0 go build -o output/WarpRegister -ldflags '-s -w -extldflags "-static"'
 
 FROM --platform=$TARGETPLATFORM alpine
-ARG TARGETOS
-ARG TARGETARCH
-EXPOSE 40000
+ARG TARGETOS TARGETARCH
+EXPOSE 40001 40002
 WORKDIR /app
 
-COPY resources/get-sb.sh .
-COPY resources/sb-example.json .
+COPY res .
 COPY --from=build /build/output/WarpRegister .
 COPY entrypoint.sh .
 
