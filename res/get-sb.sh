@@ -11,6 +11,7 @@ case $TARGETARCH in
     Sing_arch="sing-box-1.3.0-linux-amd64"
     ;;
 *)
+    echo "error: architecture not supported"
     exit 1
     ;;
 esac
