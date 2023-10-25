@@ -1,10 +1,11 @@
 FROM --platform=$TARGETPLATFORM golang:alpine AS build
+ARG TARGETOS TARGETARCH
 WORKDIR /build
 COPY build/WarpRegister.go .
 RUN true && \
     go mod init WarpRegister && \
     go mod tidy && \
-    CGO_ENABLED=0 go build -o output/WarpRegister -ldflags '-s -w -extldflags "-static"'
+    CGO_ENABLED=0 GOOS=$TARGETOS GOARCH=$TARGETARCH go build -o output/WarpRegister -ldflags '-s -w -extldflags "-static"'
 
 FROM --platform=$TARGETPLATFORM alpine
 ARG TARGETOS TARGETARCH
