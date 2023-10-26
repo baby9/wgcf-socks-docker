@@ -30,6 +30,6 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          platforms: linux/arm,linux/arm64,linux/amd64
+          platforms: linux/arm,linux/arm64,linux/amd64,linux/s390x
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/wgcf-socks:latest
