@@ -17,7 +17,7 @@ COPY --from=build /build/output/WarpRegister .
 COPY entrypoint.sh .
 
 RUN true && \
-	sh get-sb.sh && \
-	chmod +x WarpRegister sing-box
+    sh get-sb.sh && \
+    chmod +x WarpRegister sing-box
 
 ENTRYPOINT [ "/bin/sh", "entrypoint.sh" ]
