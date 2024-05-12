@@ -93,7 +93,7 @@ func main() {
 	installID := RandStringRunes(22)
 	//fcm_token = install_id:APA91b+134位随机字符串
 	fcmtoken := RandStringRunes(134)
-	payload := []byte(`{"key":"` + publicKey + `","install_id":"` + installID + `","fcm_token":"` + installID + `:APA91b` + fcmtoken + `","tos":"` + time.Now().UTC().Format("2006-01-02T15:04:05.999Z") + `","model":"Android","serial_number":"` + installID + `","locale":"zh_CN"}`)
+	payload := []byte(`{"key":"` + publicKey + `","install_id":"` + installID + `","fcm_token":"` + installID + `:APA91b` + fcmtoken + `","tos":"` + time.Now().UTC().Format("2006-01-02T15:04:05.999Z") + `","model":"Android","serial_number":"` + installID + `","locale":"en_US"}`)
 
 	client := &http.Client{Transport: &http.Transport{
 		TLSClientConfig: &tls.Config{
