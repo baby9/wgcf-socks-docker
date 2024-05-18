@@ -16,9 +16,9 @@ docker run -d -p 40001:40001 -p 40002:40002 --restart=unless-stopped zenexas/wgc
 <br/><br/>
 #### RUN :
 ```
-curl -s4m8 -x socks5://127.0.0.1:40001 https://www.cloudflare.com/cdn-cgi/trace | grep warp
+curl -x socks5://127.0.0.1:40001 https://www.cloudflare.com/cdn-cgi/trace | grep warp
 ```
-Test your warp account type
+Print your warp account type
 <br/><br/>
 ````
 curl -s -x http://127.0.0.1:40002 https://ipinfo.io
@@ -31,7 +31,7 @@ curl -x socks5://127.0.0.1:40001 https://speed.cloudflare.com/__down?bytes=10000
 Speedtest
 <br/><br/>
 ## Notice
-- Require Linux Kernel ≥ 5.6 on host machine (Wireguard required)
+- ~Require Linux Kernel ≥ 5.6 on host machine (Wireguard required)~
 <br/><br/>
 ## Reference
 - [warp-reg](https://github.com/badafans/warp-reg) - Register WARP account via CloudFlare's API
