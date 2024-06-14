@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 case $TARGETARCH in
 "arm")
     Sing_arch="sing-box-1.7.0-linux-armv7"
