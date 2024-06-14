@@ -16,7 +16,7 @@ docker run -d -p 40001:40001 -p 40002:40002 --restart=unless-stopped zenexas/wgc
 <br/><br/>
 #### RUN :
 ```
-curl -x socks5://127.0.0.1:40001 https://www.cloudflare.com/cdn-cgi/trace | grep warp
+curl -sx socks5://127.0.0.1:40001 https://www.cloudflare.com/cdn-cgi/trace | grep warp
 ```
 Print your warp account type
 <br/><br/>
