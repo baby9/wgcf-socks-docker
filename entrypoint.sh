@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 if [ ! -f warp.yml ]; then
     ./WarpRegister > warp.yml
 fi
