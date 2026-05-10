@@ -26,7 +26,7 @@ curl -s -x http://127.0.0.1:40002 https://ipinfo.io
 Lookup your warp ip location
 <br/><br/>
 ````
-curl -x socks5://127.0.0.1:40001 https://speed.cloudflare.com/__down?bytes=1000000000 > /dev/null
+curl -x socks5://127.0.0.1:40001 --referer "https://speed.cloudflare.com" https://speed.cloudflare.com/__down?bytes=1000000000 > /dev/null
 ````
 Speedtest
 <br/><br/>
